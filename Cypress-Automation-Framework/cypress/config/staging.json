@@ -1,0 +1,9 @@
+{
+  "baseUrl": "https://www.saucedemo.com",
+  "apiUrl": "https://www.saucedemo.com",
+  "standardUser": "standard_user",
+  "lockedOutUser": "locked_out_user",
+  "problemUser": "problem_user",
+  "performanceGlitchUser": "performance_glitch_user",
+  "defaultPassword": "secret_sauce"
+}

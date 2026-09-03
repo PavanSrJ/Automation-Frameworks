@@ -1,0 +1,36 @@
+{
+  "name": "cypress-automation-framework",
+  "version": "1.0.0",
+  "description": "Scalable Cypress E2E automation framework demonstrating Page Object Model, reusable commands, fixture-based test data, environment configuration, reporting, and CI-ready execution.",
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:run:chrome": "cypress run --browser chrome",
+    "cy:run:firefox": "cypress run --browser firefox",
+    "test": "cypress run --env environmentName=qa",
+    "test:qa": "cypress run --env environmentName=qa",
+    "test:staging": "cypress run --env environmentName=staging",
+    "test:smoke": "cypress run --env grepTags=@smoke",
+    "test:regression": "cypress run --env grepTags=@regression",
+    "report:merge": "mochawesome-merge cypress/reports/mochawesome/*.json > cypress/reports/mochawesome/merged-report.json",
+    "report:generate": "marge cypress/reports/mochawesome/merged-report.json -f report -o cypress/reports/html",
+    "report": "npm run report:merge && npm run report:generate",
+    "posttest": "npm run report",
+    "lint": "eslint cypress/**/*.js",
+    "format": "prettier --write \"cypress/**/*.js\""
+  },
+  "devDependencies": {
+    "cypress": "^13.15.0",
+    "@cypress/grep": "^4.1.0",
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-cypress": "^3.5.0",
+    "prettier": "^3.3.3",
+    "dotenv": "^16.4.5"
+  }
+}
