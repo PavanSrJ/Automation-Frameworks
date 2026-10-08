@@ -1,0 +1,40 @@
+{
+  "name": "automationexercise-playwright-framework",
+  "version": "1.0.0",
+  "description": "Production-grade Playwright UI + API test automation framework for automationexercise.com",
+  "type": "commonjs",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test --project=ui",
+    "test:api": "playwright test --project=api",
+    "test:smoke": "playwright test --project=ui --grep @smoke",
+    "test:headed": "playwright test --project=ui --headed",
+    "test:debug": "playwright test --debug",
+    "test:report": "playwright show-report",
+    "setup": "playwright test --project=setup",
+    "codegen": "playwright codegen https://automationexercise.com",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "install:browsers": "playwright install --with-deps"
+  },
+  "keywords": [
+    "playwright",
+    "automation",
+    "testing",
+    "api-testing",
+    "e2e"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "@faker-js/faker": "^9.0.3",
+    "dotenv": "^16.4.5",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-playwright": "^1.6.2",
+    "prettier": "^3.3.3"
+  }
+}
